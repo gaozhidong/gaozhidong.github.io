@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JavaScript - 标签 - Dong</title>
+        <link>https://example.com/tags/javascript/</link>
+        <description>JavaScript - 标签 - Dong</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 06 Mar 2017 21:40:32 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>弹窗</title>
+    <link>https://example.com/javascript%E5%BC%B9%E7%AA%97/</link>
+    <pubDate>Mon, 06 Mar 2017 21:40:32 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/javascript%E5%BC%B9%E7%AA%97/</guid>
+    <description><![CDATA[<p>HTML + JS 的一个 弹窗</p>]]></description>
+</item></channel>
+</rss>
