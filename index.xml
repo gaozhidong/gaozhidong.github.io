@@ -3,7 +3,8 @@
         <title>Dong</title>
         <link>https://example.com/</link>
         <description>关于 LoveIt 主题</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 06 Mar 2017 21:40:32 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>gaozd1995@gmail.com (gaozhidong)</managingEditor>
+            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Mar 2017 08:54:35 &#43;0800</lastBuildDate>
             <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>弹窗</title>
@@ -12,5 +13,12 @@
     <author>作者</author>
     <guid>https://example.com/javascript-modal/</guid>
     <description><![CDATA[<p><strong>HTML + JS 的一个 弹窗</strong></p>]]></description>
+</item><item>
+    <title>HTML &#43; JS 的一个 Tab切换</title>
+    <link>https://example.com/javascript-tab/</link>
+    <pubDate>Thu, 09 Mar 2017 08:54:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/javascript-tab/</guid>
+    <description><![CDATA[<p><strong>使用原生JavaScript完成一个Tab切换</strong></p>]]></description>
 </item></channel>
 </rss>
