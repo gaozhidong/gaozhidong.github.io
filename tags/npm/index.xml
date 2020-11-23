@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>npm - 标签 - Dong</title>
+        <link>https://example.com/tags/npm/</link>
+        <description>npm - 标签 - Dong</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>gaozd1995@gmail.com (gaozhidong)</managingEditor>
+            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 02 Jun 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://example.com/tags/npm/" rel="self" type="application/rss+xml" /><item>
+    <title>一键将package.json中的模块更新到最新版本</title>
+    <link>https://example.com/npm-update/</link>
+    <pubDate>Tue, 02 Jun 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/npm-update/</guid>
+    <description><![CDATA[<p><strong>更新依赖</strong></p>]]></description>
+</item><item>
+    <title>npm 常见的一些配置</title>
+    <link>https://example.com/npm-config/</link>
+    <pubDate>Wed, 23 Aug 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/npm-config/</guid>
+    <description><![CDATA[<p><strong>npm 小技巧</strong></p>]]></description>
+</item></channel>
+</rss>

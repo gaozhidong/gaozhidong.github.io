@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>WebRTC - 标签 - Dong</title>
+        <link>https://example.com/tags/webrtc/</link>
+        <description>WebRTC - 标签 - Dong</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>gaozd1995@gmail.com (gaozhidong)</managingEditor>
+            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Oct 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://example.com/tags/webrtc/" rel="self" type="application/rss+xml" /><item>
+    <title>WebRTC涉及名词和学习资料</title>
+    <link>https://example.com/webrtc%E6%B6%89%E5%8F%8A%E5%90%8D%E8%AF%8D%E5%92%8C%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</link>
+    <pubDate>Sun, 06 Oct 2019 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/webrtc%E6%B6%89%E5%8F%8A%E5%90%8D%E8%AF%8D%E5%92%8C%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</guid>
+    <description><![CDATA[WebRTC涉及名词和学习资料]]></description>
+</item><item>
+    <title>WebRTC核心API</title>
+    <link>https://example.com/webrtc%E6%A0%B8%E5%BF%83api/</link>
+    <pubDate>Fri, 04 Oct 2019 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/webrtc%E6%A0%B8%E5%BF%83api/</guid>
+    <description><![CDATA[WebRTC核心API]]></description>
+</item><item>
+    <title>WebRTC简介</title>
+    <link>https://example.com/webrtc%E7%AE%80%E4%BB%8B/</link>
+    <pubDate>Wed, 02 Oct 2019 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/webrtc%E7%AE%80%E4%BB%8B/</guid>
+    <description><![CDATA[WebRTC简介]]></description>
+</item></channel>
+</rss>

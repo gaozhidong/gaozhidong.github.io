@@ -4,13 +4,41 @@
         <link>https://example.com/tags/javascript/</link>
         <description>JavaScript - 标签 - Dong</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>gaozd1995@gmail.com (gaozhidong)</managingEditor>
-            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Mar 2017 08:54:35 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Jul 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://example.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>弹窗</title>
     <link>https://example.com/javascript-modal/</link>
     <pubDate>Mon, 06 Mar 2017 21:40:32 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://example.com/javascript-modal/</guid>
     <description><![CDATA[<p><strong>HTML + JS 的一个 弹窗</strong></p>]]></description>
+</item><item>
+    <title>前端性能优化</title>
+    <link>https://example.com/web-performance-optimization/</link>
+    <pubDate>Tue, 23 Jul 2019 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/web-performance-optimization/</guid>
+    <description><![CDATA[前端性能优化]]></description>
+</item><item>
+    <title>提升webpack的构建速度</title>
+    <link>https://example.com/%E6%8F%90%E5%8D%87webpack%E7%9A%84%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6/</link>
+    <pubDate>Wed, 08 May 2019 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/%E6%8F%90%E5%8D%87webpack%E7%9A%84%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6/</guid>
+    <description><![CDATA[提升 webpack 的构建速度]]></description>
+</item><item>
+    <title>Win7 安装 Mongodb</title>
+    <link>https://example.com/win7-install-mongodb/</link>
+    <pubDate>Sat, 23 Sep 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/win7-install-mongodb/</guid>
+    <description><![CDATA[Win7 安装 Mongodb]]></description>
+</item><item>
+    <title>npm 常见的一些配置</title>
+    <link>https://example.com/npm-config/</link>
+    <pubDate>Wed, 23 Aug 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/npm-config/</guid>
+    <description><![CDATA[<p><strong>npm 小技巧</strong></p>]]></description>
 </item><item>
     <title>HTML &#43; JS 的一个 Tab切换</title>
     <link>https://example.com/javascript-tab/</link>

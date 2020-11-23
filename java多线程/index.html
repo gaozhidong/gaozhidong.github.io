@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Java多线程 - Dong</title><meta name="Description" content="Java 多线程"><meta property="og:title" content="Java多线程" />
+<meta property="og:description" content="Java 多线程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2019-05-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="Java多线程"/>
+<meta name="twitter:description" content="Java 多线程"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" /><link rel="prev" href="https://example.com/%E6%8F%90%E5%8D%87webpack%E7%9A%84%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6/" /><link rel="next" href="https://example.com/search-skill/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Java多线程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/java%E5%A4%9A%E7%BA%BF%E7%A8%8B\/"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Java","wordcount":  1726 ,
+        "url": "https:\/\/example.com\/java%E5%A4%9A%E7%BA%BF%E7%A8%8B\/","datePublished": "2019-05-21T00:00:00+00:00","dateModified": "2019-05-21T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "gaozhidong","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "gaozhidong"
+            },"description": "Java 多线程"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Dong"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Dong</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/gaozhidong" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Dong"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Dong</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/gaozhidong" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Java多线程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>gaozhidong</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-05-21">2019-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1726 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="leancloud_visitors" data-flag-title="Java多线程">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#进程和线程">进程和线程</a></li>
+            <li><a href="#java线程">Java线程</a></li>
+            <li><a href="#java中进程与线程的关系">Java中进程与线程的关系：</a></li>
+          </ul>
+        </li>
+        <li><a href="#为什么需要多线程">为什么需要多线程</a>
+          <ul>
+            <li><a href="#开启一个新的线程">开启一个新的线程</a>
+              <ul>
+                <li><a href="#thread">Thread</a></li>
+                <li><a href="#多线程带来的性能提升">多线程带来的性能提升</a></li>
+                <li><a href="#昂贵的线程">昂贵的线程</a></li>
+                <li><a href="#线程安全">线程安全</a></li>
+                <li><a href="#线程不安全的表现">线程不安全的表现</a></li>
+                <li><a href="#线程安全-1">线程安全</a></li>
+                <li><a href="#线程池与callablefuture">线程池与Callable/Future</a></li>
+                <li><a href="#多线程的经典问题">多线程的经典问题</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h4 id="进程和线程">进程和线程</h4>
+<blockquote>
+<p>线程（英语：thread）是操作系统能够进行运算调度的最小单位。大部分情况下，它被包含在进程之中，是进程中的实际运作单位。一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并行多个线程，每条线程并行执行不同的任务。在Unix System V及SunOS中也被称为轻量进程（lightweight processes），但轻量进程更多指内核线程（kernel thread），而把用户线程（user thread）称为线程。</p>
+</blockquote>
+<blockquote>
+<p>一个进程可以有很多线程，每条线程并行执行不同的任务。</p>
+</blockquote>
+<h4 id="java线程">Java线程</h4>
+<blockquote>
+<p>最简单的情况是，Thread/Runnable的run()方法运行完毕，自行终止。</p>
+</blockquote>
+<p>Java中创建线程的方式有两种，不管使用继承Thread的方式还是实现Runnable接口的方式，都需要重写run方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">//继承Thread类
+1、 定义继承Thread;
+
+2、复写Thread类中的run方法;（目的：将自定义代码存储在run方法中，让线程运行（同时运行，抢夺资源））
+
+3、调用线程的start方法；（目的：启动线程，调用run方法）
+
+//实现Runnable接口
+1、定义类实现Runnable接口；
+  
+2、覆盖Runnable接口中的run方法；
+
+3、通过Thread类建立线程对象；
+
+4、将Runnable接口的子类对象作为实际参数传递给Thread类的构造方法；
+
+5、调用Thread类的start方法，开启线程并调节Runnable接口子类的run方法；
+  
+  
+//区别：
+继承只能继承一个，具有局限性。
+继承Thread: 线程代码存放在子类run。
+实现runnable: 线程代码存放在接口的子类run。
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>对于更复杂的情况，比如有循环，则可以增加终止标记变量和任务终止的检查点。</p>
+</blockquote>
+<blockquote>
+<p>最常见的情况，也是为了解决阻塞不能执行检查点的问题，用中断来结束线程，但中断只是请求，并不能完全保证线程被终止，需要执行线程协同处理。</p>
+</blockquote>
+<blockquote>
+<p>IO阻塞和等锁情况下需要通过特殊方式进行处理。</p>
+</blockquote>
+<blockquote>
+<p>使用Future类的cancel()方法调用。</p>
+</blockquote>
+<blockquote>
+<p>调用线程池执行器的shutdown()和shutdownNow()方法。</p>
+</blockquote>
+<blockquote>
+<p>守护线程会在非守护线程都结束时自动终止。</p>
+</blockquote>
+<blockquote>
+<p>Thread有stop()方法，但已不推荐使用。</p>
+</blockquote>
+<h4 id="java中进程与线程的关系">Java中进程与线程的关系：</h4>
+<ol>
+<li>运行一个程序会产生一个进程，进程至少包含一个线程。</li>
+<li>每个进程对应一个JVM实例，多个线程共享JVM中的堆。</li>
+<li>Java采用单线程编程模型，程序会自动创建主线程。</li>
+<li>主线程可以创建子线程，原则上要后于子线程完成执行。</li>
+</ol>
+<p><strong>多线程</strong></p>
+<p>即便处理器只能运行一个线程，操作系统也可以通过快速的在不同线程之间进行切换，由于时间间隔很小，来给用户造成一种多个线程同时运行的假象。这样的程序运行机制被称为软件多线程。</p>
+<h3 id="为什么需要多线程">为什么需要多线程</h3>
+<ul>
+<li>现代CPU都是多核的</li>
+<li>Java执行模型是同步/阻塞(block)的</li>
+<li>默认情况下只有一个进程
+<ul>
+<li>处理问题非常自然</li>
+<li>但是具有严重的性能问题</li>
+</ul>
+</li>
+</ul>
+<h4 id="开启一个新的线程">开启一个新的线程</h4>
+<h5 id="thread">Thread</h5>
+<ul>
+<li>Java中只有这么一种东西代表线程</li>
+<li>start方法才能并发执行</li>
+<li>每多开一个线程，就多一个执行流</li>
+<li>方法栈（局部变量）是线程私有的</li>
+<li>静态方法/类变量是被所有线程共享的</li>
+</ul>
+<h5 id="多线程带来的性能提升">多线程带来的性能提升</h5>
+<ul>
+<li>对于IO密集型应用及其有用
+<ul>
+<li>网络IO （通常包括数据库）</li>
+<li>文件IO</li>
+</ul>
+</li>
+<li>对于CUP密集型应用稍有折扣</li>
+<li>性能提升的上线在哪里？
+<ul>
+<li>单核CPU 100%</li>
+<li>多核CUP N * 100%</li>
+</ul>
+</li>
+</ul>
+<h5 id="昂贵的线程">昂贵的线程</h5>
+<ul>
+<li>能不能使用线程达到无穷无尽的性能提升?</li>
+<li>线程的昂贵性在于
+<ul>
+<li>CPU切换上下文很慢</li>
+<li>线程需要占用内存等系统资源</li>
+</ul>
+</li>
+<li>如果应用一天才几个用户
+<ul>
+<li>new Thread().start()</li>
+</ul>
+</li>
+<li>如果应用负载很高
+<ul>
+<li>使用线程池： JUC包</li>
+</ul>
+</li>
+</ul>
+<h5 id="线程安全">线程安全</h5>
+<ul>
+<li>原子性</li>
+<li>共享变量</li>
+<li>默认的实现几乎都不是线程安全的</li>
+</ul>
+<h5 id="线程不安全的表现">线程不安全的表现</h5>
+<ul>
+<li>数据错误
+<ul>
+<li>i++</li>
+<li>if-then-do</li>
+</ul>
+</li>
+<li>死锁</li>
+</ul>
+<h5 id="线程安全-1">线程安全</h5>
+<ul>
+<li>实现线程安全的基本手段
+<ul>
+<li>不可变类
+<ul>
+<li>Integer/String</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>synchronized 同步块</li>
+<li>JUC包
+<ul>
+<li>AtomicInteger</li>
+<li>ConcurrentHashMap
+<ul>
+<li>任何使用HashMap有线程安全问题的地方，都无脑使用ConcurrentHashMap替换即可</li>
+</ul>
+</li>
+<li>ReentrantLock</li>
+<li>&hellip;</li>
+</ul>
+</li>
+</ul>
+<h5 id="线程池与callablefuture">线程池与Callable/Future</h5>
+<ul>
+<li>什么是线程池
+<ul>
+<li>线程池是昂贵的（Java线程模型的缺陷）</li>
+<li>线程池是预先定义好的若干个线程</li>
+<li>Java中的线程池</li>
+</ul>
+</li>
+<li>Callable/Future
+<ul>
+<li>类比Runnable，Callable可以返回值，抛出异常</li>
+<li>Future代表一个“未来才会返回的结果”</li>
+</ul>
+</li>
+</ul>
+<h5 id="多线程的经典问题">多线程的经典问题</h5>
+<p><strong>生产者/消费者模型</strong></p>
+<ul>
+<li>解决方法：
+<ul>
+<li>wait/notify/notifyAll</li>
+<li>Lock/Condition</li>
+<li>BlockingQueue</li>
+</ul>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-05-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-title="Java多线程" data-hashtags="Java"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-hashtag="Java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-title="Java多线程"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-title="Java多线程"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://example.com/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-title="Java多线程"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E6%8F%90%E5%8D%87webpack%E7%9A%84%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6/" class="prev" rel="prev" title="提升webpack的构建速度"><i class="fas fa-angle-left fa-fw"></i>提升webpack的构建速度</a>
+            <a href="/search-skill/" class="next" rel="next" title="搜索技巧">搜索技巧<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">gaozhidong</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
