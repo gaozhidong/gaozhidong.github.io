@@ -4,13 +4,20 @@
         <link>https://example.com/tags/javascript/</link>
         <description>JavaScript - 标签 - Dong</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>gaozd1995@gmail.com (gaozhidong)</managingEditor>
-            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Feb 2021 16:52:34 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>gaozd1995@gmail.com (gaozhidong)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 16 Mar 2021 10:48:45 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>弹窗</title>
     <link>https://example.com/javascript-modal/</link>
     <pubDate>Mon, 06 Mar 2017 21:40:32 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://example.com/javascript-modal/</guid>
     <description><![CDATA[<p><strong>HTML + JS 的一个 弹窗</strong></p>]]></description>
+</item><item>
+    <title>开发react项目代码格式和校验规范</title>
+    <link>https://example.com/%E5%BC%80%E5%8F%91react%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%92%8C%E6%A0%A1%E9%AA%8C%E8%A7%84%E8%8C%83/</link>
+    <pubDate>Tue, 16 Mar 2021 10:48:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/%E5%BC%80%E5%8F%91react%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%92%8C%E6%A0%A1%E9%AA%8C%E8%A7%84%E8%8C%83/</guid>
+    <description><![CDATA[这是描述]]></description>
 </item><item>
     <title>NestJs使用</title>
     <link>https://example.com/nestjs%E4%BD%BF%E7%94%A8/</link>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://example.com/%E6%8F%90%E5%8D%87webpack%E7%9A%84%E6%9E%84%E5%BB%BA%E9%80%9F%E5%BA%A6/</guid>
     <description><![CDATA[提升 webpack 的构建速度]]></description>
-</item><item>
-    <title>Win7 安装 Mongodb</title>
-    <link>https://example.com/win7-install-mongodb/</link>
-    <pubDate>Sat, 23 Sep 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/win7-install-mongodb/</guid>
-    <description><![CDATA[Win7 安装 Mongodb]]></description>
 </item></channel>
 </rss>
